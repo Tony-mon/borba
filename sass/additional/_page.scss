@@ -1,0 +1,278 @@
+/*-------------------------------------------- header ------------------------------------------*/
+#header {
+	@extend %pageWidth;
+
+	position: relative;
+	z-index: 2;
+
+	height: 95px;
+	padding-top: 26px;
+}
+#containerHeader {
+	height: 130px;
+	@include alignJustify();
+}
+
+.logo{
+	text-decoration: none;
+	margin-left: -77px;
+	display: inline-block;
+	z-index: 2;
+	img{
+		float: left;
+	}
+	.title{
+		margin-left: 77px;
+		font-size: 14px;
+		display: block;
+		color:#000;
+		font-weight: 300;
+		.boldText{
+			font-size: 48px;
+			line-height: 1.2; 
+		}
+	}
+	&:hover{
+		img{
+			
+		}
+	}	
+}
+.social{ 
+	display: inline-block;
+	padding-top: 7px;
+	#containerHeader &{
+		margin-right: -80px;
+	}
+	&>a{
+		display: inline-block;
+		width: 28px;
+		height: 28px;
+		@include border-radius(15px);
+		border:1px solid #000;
+		text-align: center;
+		line-height: 28px;
+		&:before{
+			line-height: 1;
+		}
+		&:hover{
+			color:$pink;
+			border-color: $pink;
+		}
+	}
+	#footer &{
+		a{
+			border-color: #fff;
+			&:hover{
+				border-color: $pink;
+			}
+		}
+	}
+	.lang{
+		padding-top: 45px;
+		text-align: right;
+		font-size: 12px;
+		a{
+			img{
+				@include filter(grayscale(100%));
+				&.active{
+					@include filter(grayscale(0));			
+				}
+			}
+			
+			&:hover{
+				border-color: $pink;
+			}
+		}
+		
+	}
+}
+
+.adaptiveMenu{
+	display: inline-block;
+	height: 93px;
+	width: 977px;
+}
+.menuWrap{
+	width: auto;
+}
+.country{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 12px;
+	z-index: 10;
+	.current{
+		display: inline-block;
+		border-bottom: 1px dashed #000;
+		cursor: pointer;
+		margin-left: 5px;
+		position: relative;
+		color: $pink;
+		border-color: $pink;
+		z-index: 1;
+	}
+	.switch{
+		position: relative;
+		z-index: 10;
+		&:hover{
+			.list{
+				display: block;
+			}
+		}
+	}
+	i{
+		margin-left: 5px;
+	}
+	.list{
+		position: absolute;
+		padding: 10px;
+		display: inline-block;
+		left: -5px;
+		top: -7px;
+		background: #eee;
+		padding-top: 30px;
+		@include border-radius(4px);
+		display: none;
+	}
+	li{
+		margin-bottom: 5px;
+		a{
+			&:hover{
+				color:$pink;
+			}
+		}
+	}
+}
+#menu {
+	display: block;
+	padding-left: 0;
+	text-align: center;
+	white-space: nowrap;
+	li{
+	    float: left;
+		margin-right: 2%;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 2.4;
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover, &.active{
+			color:$pink;
+		}
+	}
+	cursor: pointer;
+}
+
+#menuButton{
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	cursor: pointer;
+	display: none;
+	z-index: 1000;
+	width: 30px;
+	height: 32px;
+	overflow: hidden;
+	.openMenu &{
+		right: 280px;
+	}
+}
+.menuLine{
+	position: relative;
+	width: 30px;
+	height: 4px;
+	margin: 5px auto;
+	background: #000;
+	z-index: 10;
+	right: 0;
+	@include transition(all, 0.3s);
+	@include opacity(1);
+	.openMenu &{
+		@include alignCenter();
+		@include transition(all, 0.3s);
+		background: #fff;
+	 	&:nth-child(2){
+			right: -100px;
+	 	}
+	 	&:nth-child(1){
+			@include rotate(45deg);
+	 	}
+	 	&:nth-child(3){
+			@include rotate(-45deg);
+	 	}
+
+	}
+}
+
+
+.secondryMenu{
+	background:#000;
+	position: relative;
+	color:#fff;
+	height: 50px;
+	padding: 0;
+	margin-bottom: 16px;
+	font-size: 14px;
+	li{
+		display: inline-block;
+		a{
+			padding: 0 20px; line-height: 50px;
+			display: block;
+			height: 50px;
+		}
+	}
+	&:before,
+	&:after{
+		background:#000;
+	}
+}
+
+#breads{
+	font-size: 12px;
+	margin-bottom: 4.5em;
+	a{
+		&:hover{
+			color:$pink;
+		}
+	}
+}
+
+/*-------------------------------------------- footer ------------------------------------------*/
+#footer {@extend %pageWidth;
+	position: absolute;
+	z-index: 2;
+	@include box-sizing(border-box);
+	bottom: 0;
+	left: 0;
+	background:#000;
+	color:#fff;
+	padding: 60px  80px;
+}
+#containerFooter {
+	height: auto;
+	.col{
+		font-size: 14px;
+		font-weight: 300;
+		float: left;
+		width: 16.6%;
+		&>a{
+			font-weight: 700;
+			line-height: 1.8;			
+			&:hover{
+				text-decoration: underline;
+			}
+		}		
+		ul{
+			padding-left: 0;
+			line-height: 1.8;
+			a{
+				&:hover{
+					@include opacity(0.7);
+				}
+				
+			}
+		}
+	}
+}
