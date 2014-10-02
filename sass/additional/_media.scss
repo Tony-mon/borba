@@ -226,6 +226,11 @@
 			}
 		}
 	}
+	.secondryMenu{
+		li{
+			width: 25%;
+		}
+	}
 	#menuButton{
 		display: block;
 	}
@@ -582,6 +587,11 @@
 			}
 		}
 	}
+	.secondryMenu{
+		li{
+			width: 33.33%;
+		}
+	}
 }
 
 
@@ -645,6 +655,11 @@
 					display: inline-block;
 				}
 			}				
+		}
+	}
+	.secondryMenu{
+		li{
+			width: 50%;
 		}
 	}
 
@@ -816,6 +831,11 @@
 					display: none !important;
 				}
 			}
+		}
+	}
+	.secondryMenu{
+		li{
+			width: 100%;
 		}
 	}
 }

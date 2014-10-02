@@ -211,16 +211,21 @@
 	background:#000;
 	position: relative;
 	color:#fff;
-	height: 50px;
 	padding: 0;
 	margin-bottom: 16px;
-	font-size: 14px;
+	margin-left:-20px;
+	margin-right: -20px; 
+	font-size: 0;
 	li{
 		display: inline-block;
+		font-size: 14px;
 		a{
 			padding: 0 20px; line-height: 50px;
 			display: block;
 			height: 50px;
+			&:hover{
+				background:$pink;
+			}
 		}
 	}
 	&:before,
