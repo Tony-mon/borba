@@ -48,26 +48,61 @@
 				width:50% !important;
 			}
 		}
+		&.multimediaFilter{
+			padding-bottom: 25px;
+			&:after{
+				font-size: 0;
+				display: none;
+			}
+			// .fluide{
+			// 	margin-left: 250px;
+			// 	margin-right: 25%;
+			// 	padding-right: 40px;
+			// 	float: none;
+			// 	.label{
+			// 		float: left;
+			// 	}
+			// 	.jq-selectbox{
+			// 		width: auto;
+			// 		display: block !important;
+			// 		margin-left: 70px;
+			// 	}
+			// }
+			.fluide{
+				width: auto;
+			}
+			.inputFormRow{
+				width: 25%;
+				top: -34px;
+				padding-right: 0;
+			}
+			.filterTitle{
+				width: 250px;
+			}
+			.formRow {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 
 @media screen and (max-width: 1420px) {
 	.adaptiveMenu{
-		width: 570px;
+		width: 575px;
 	}
 	#menu{
 		text-align: left;
 		li{
 			width: 100px;
 			margin-right: 0;
-			&:nth-child(4), &:nth-child(9){
+			&:nth-child(2), &:nth-child(7), &:nth-child(4), &:nth-child(9){
 				width: 136px;
 			}
 			&:last-child{
-				position: absolute;
-				right: 0;
-				top: 0;
-				width: 20px;
+				// position: absolute;
+				// right: 0;
+				// top: 0;
+				// width: 20px;
 			}
 		}
 	}
@@ -140,7 +175,6 @@
 				line-height: 32px;
 			}
 			.firstEvent{
-				.title{font-size: 16px;}
 				p{
 					font-size: 14px;
 				}
@@ -186,6 +220,24 @@
 	}
 	
 }
+
+@media screen and (max-width: 1100px) {
+	.adaptiveMenu{
+		width: 397px;
+	}
+	#menu{
+		li{
+			line-height: 2;
+			width: 160px;
+			&:nth-child(3n){
+				width: 75px;
+			}
+			&:nth-child(2), &:nth-child(7), &:nth-child(4){
+				width: 160px;
+			}
+		}
+	}	
+}
 @media screen and (max-width: 1023px) {
 	body{
 		
@@ -209,7 +261,7 @@
 		li{
 			float: none;
 			border-bottom: 1px solid #d4d4d4;
-			width: 100%;
+			width: 100% !important;
 			&:last-child{
 				position: relative;
 				width: 100%;
@@ -242,17 +294,38 @@
 		#containerHeader &{
 			position: absolute;
 			margin-right: 0;
-			top: 540px;
-			right: 109px;
+			top: 480px;
+			right: 70px;
 			z-index: 11;
 			display: none !important;
+			.openMenu &{
+				display: block !important;
+			}
 		}		
-		.openMenu &{
-			display: block !important;
+		.lang{
+			padding: 20px;
+			width: 260px;
+			background:#fff;
+			position: absolute;
+			@include box-sizing(border-box);
+			top: -75px;
+			left: -24px;
+			text-align: left;
 		}
 		a{
 			border-color:#999999;
 			color:#999999;
+			&.ok-ico{
+				&:after{
+					background-position: -81px -259px;
+					@include opacity(0.7);
+				}
+				&:hover{
+					&:after{
+						background-position: -70px -259px;
+					}
+				}
+			}
 		}
 	}
 	#pageHTML{
@@ -316,6 +389,23 @@
 			}
 			&:nth-of-type(even){
 				width: 50%;
+			}
+		}
+		&.multimediaFilter{
+			
+			.fluide{
+				width: auto;
+			}
+			.inputFormRow{
+				width: 25%;
+				top: -34px;
+				padding-right: 0;
+			}
+			.filterTitle{
+				width: 250px;
+			}
+			.formRow {
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -513,8 +603,10 @@
 			.contactData{
 				float: left;
 			}
-			.pullMob{
+			.pullMob,.searchF{
 				float: right;
+				width: 180px;
+				clear: right;
 			}
 		}
 	}
@@ -592,6 +684,9 @@
 			width: 33.33%;
 		}
 	}
+	.playButton{
+		@include scale(0.5); 
+	}
 }
 
 
@@ -640,6 +735,26 @@
 			}
 			&.inputFormRow{
 				padding: 0;
+			}
+		}
+		&.multimediaFilter{
+			
+			.fluide{
+				width: auto;
+				margin-left: 0;
+			}
+			.inputFormRow{
+				width: 25%;
+				top: -34px;
+				padding-right: 0;
+			}
+			.filterTitle{
+				width: 100%;
+				float: none !important;
+				margin-bottom: 20px !important;
+			}
+			.formRow {
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -738,7 +853,16 @@
 	}
 		
 	.mapOnmain{
-		display: none;
+		.pull-right, .videoBlock{
+			float: none !important;
+			width: 100% !important;
+			position: relative;
+			height: auto;
+			padding: 0 !important;
+		}
+		.videoBlock{
+			margin-bottom: 10%;
+		}
 	}
 
 
@@ -750,6 +874,11 @@
 		width: 100%;
 		float: none;
 		max-width: none;
+	}
+	.mapOnmain{
+		.pull-right{
+			padding: 20px !important;
+		}
 	}
 	.filter{
 		.formRow{
@@ -769,6 +898,20 @@
 				&:nth-child(1){
 					padding-right: 0;
 				}
+			}
+		}
+		&.multimediaFilter{ 
+			
+			.fluide{
+				width: auto;
+				margin-left: 0;
+				margin-right: 0;
+				padding-right: 0;
+				margin-bottom: 20px;
+			}
+			.inputFormRow{
+				top: 0;
+				float: none !important;
 			}
 		}
 	}
@@ -817,10 +960,16 @@
 			}
 		}	
 	}
-
-	.contactData, .pullMob{
-		float: none !important;
+	#footer{
+		.col{
+			.contactData, .pullMob, .searchF{
+				float: none !important;
+				width: 100%;
+			}
+		}
+		
 	}
+	
 	.resParts{
 		.resultsBlock{
 			
@@ -838,6 +987,7 @@
 			width: 100%;
 		}
 	}
+	
 }
 
 @media screen and (max-width: 480px) {

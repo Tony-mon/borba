@@ -53,8 +53,17 @@ $(function(){
 
 
 		$("#containerMain").css("padding-bottom", $("#footer").height() + 120 + "px");
+
+
+		$(".mapOnmain .videoBlock .row").height($(".mapOnmain .videoBlock .row").width()*0.66);
 		
 	}
+
+	// Отображения Событий календаря
+
+	$("td .contains").click(function(){
+		$(this).find(".popEvent").toggleClass("shown");
+	});
 
 	
 	

@@ -21,9 +21,9 @@
 	<a href="polojeniya.php">Положения</a><br>
 	<a href="reytingi.php">Рейтинг</a><br>
 	<a href="rukovodstvo.php">Руководство</a><br>
-	<a href="rukovoditel.php">Руководитель</a><br>
+	<a href="rukovoditel.php">Руководитель (страницы не будет)</a><br>
 	<a href="sobitiya.php">События</a><br>
-	<a href="sorevnovanie.php">Соревнование</a><br>
+	<a href="sorevnovanie.php">Соревнование (страницы не будет)</a><br>
 	<a href="sorevnovaniya.php">Соревнования</a><br>
 	<a href="videoalbum.php">Видеоальбом</a><br>
 	<a href="volniyStil.php">Вольный стиль</a><br>

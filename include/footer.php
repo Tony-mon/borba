@@ -5,63 +5,66 @@
 		<footer id="footer">
 			<div id="containerFooter" class="inner">
 				<div class="col">
-					<a href="">О нас</a>
+					<a href="">Ассоциации</a>
 					<ul>
-						<li><a href="">Lorem ipsum.</a></li>
-						<li><a href="">Natus, vitae.</a></li>
-						<li><a href="">Cumque, nulla.</a></li>
-						<li><a href="">Voluptate, asperiores!</a></li>
-						<li><a href="">Quod, odit.</a></li>
-						<li><a href="">Eum, sed.</a></li>
-						<li><a href="">Eaque, ad.</a></li>
+						<li><a href="">Об ассоциации</a></li>
+						<li><a href="">Члены ассоциации</a></li>
+						<li><a href="">Руководство</a></li>
+						<li><a href="">Попечительский совет</a></li>
+						<li><a href="">Почетный президиум</a></li>
+						<li><a href="">Комиссии</a></li>
+						<li><a href="">Чемпионы мира 2014</a></li>
+						<li><a href="">Нормативные акты</a></li>
+						<li><a href="">Фонд развития</a></li>
 					</ul>
 				</div>
 				<div class="col">
-					<a href="">О нас</a>
+					<a href="">Борьба</a>
 					<ul>
-						<li><a href="">Lorem ipsum.</a></li>
-						<li><a href="">Natus, vitae.</a></li>
-						<li><a href="">Cumque, nulla.</a></li>
-						<li><a href="">Voluptate, asperiores!</a></li>
-						<li><a href="">Quod, odit.</a></li>
-						<li><a href="">Eum, sed.</a></li>
-						<li><a href="">Eaque, ad.</a></li>
+						<li><a href="">История</a></li>
+						<li><a href="">Вольный стиль</a></li>
+						<li><a href="">Борьба народов мира</a></li>
+						<li><a href="">Библиотека</a></li>
 					</ul>
 				</div>
 				<div class="col">
-					<a href="">О нас</a>
+					<a href="">Соревнования</a>
 					<ul>
-						<li><a href="">Lorem ipsum.</a></li>
-						<li><a href="">Natus, vitae.</a></li>
-						<li><a href="">Cumque, nulla.</a></li>
-						<li><a href="">Voluptate, asperiores!</a></li>
-						<li><a href="">Quod, odit.</a></li>
-						<li><a href="">Eum, sed.</a></li>
-						<li><a href="">Eaque, ad.</a></li>
+						<li><a href="">Календарь соревнований</a></li>
+						<li><a href="">Архив результатов</a></li>
+						<li><a href="">Рейтинги спортсменов</a></li>
+						<li><a href="">Правила проведения</a></li>
+						<li><a href="">Соревнований</a></li>
+						<li><a href="">Регламенты</a></li>
 					</ul>
 				</div>
 				<div class="col">
-					<a href="">О нас</a>
+					<a href="">Новости</a>
 					<ul>
-						<li><a href="">Lorem ipsum.</a></li>
-						<li><a href="">Natus, vitae.</a></li>
-						<li><a href="">Cumque, nulla.</a></li>
-						<li><a href="">Voluptate, asperiores!</a></li>
-						<li><a href="">Quod, odit.</a></li>
-						<li><a href="">Eum, sed.</a></li>
-						<li><a href="">Eaque, ad.</a></li>
+						<li><a href="">Анонсы соревнований</a></li>
+						<li><a href="">События</a></li>
+						<li><a href="">Интервью</a></li>
+						<li><a href="">СМИ о нас</a></li>
+					</ul>
+					<br><br>
+					<a href="">Энциклопедия</a>
+					<ul>
+						<li><a href="">Премия</a></li>
 					</ul>
 				</div>
 				<div class="col">
-					<a href="">О нас</a>
+					<a href="">Партнеры</a>
 					<ul>
-						<li><a href="">Lorem ipsum.</a></li>
-						<li><a href="">Natus, vitae.</a></li>
-						<li><a href="">Cumque, nulla.</a></li>
-						<li><a href="">Voluptate, asperiores!</a></li>
-						<li><a href="">Quod, odit.</a></li>
-						<li><a href="">Eum, sed.</a></li>
-						<li><a href="">Eaque, ad.</a></li>
+						<li><a href="">Генеральные партнеры</a></li>
+						<li><a href="">Информационные партнеры</a></li>
+						<li><a href="">Партнеры</a></li>
+						<li><a href="">Спонсоры</a></li>
+					</ul>
+					<br><br>
+					<a href="">Контакты</a>
+					<ul>
+						<li><a href="">Контактная информация</a></li>
+						<li><a href="">Пресс-центр</a></li>
 					</ul>
 				</div>
 				<div class="col">
@@ -74,13 +77,16 @@
 							тел: 8(499)2133110<br>
 							Режим работы: ПН - СБ с 8.00 до 17.00<br><br>
 						</div>		
-						
+						<form action="" class="searchF">
+							<input type="text"><i class="fa fa-search"><input type="submit" value=""></i>
+						</form>
 						<div class="pullMob">
 							<div class="social">
 								<a href="" class="fa fa-vk"></a>
 								<a href="" class="fa fa-twitter"></a>
 								<a href="" class="fa fa-facebook"></a>
 								<a href="" class="fa fa-youtube-play"></a>
+								<a href="" class="fa ok-ico"></a>
 							</div>
 							<br><br>
 							<div id="bx-composite-banner"></div>

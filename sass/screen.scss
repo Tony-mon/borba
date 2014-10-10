@@ -176,6 +176,46 @@ main {
 		float: left;
 
 		width: 8.33%;
+		&.soon{
+			&:after{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background:$pink;
+				content:"Скоро";
+				text-transform: uppercase;
+				color:#fff;
+				padding: 9px;
+				font-size: 14px;
+				font-weight: 700;
+			}
+		}
+		&.broadcasting{
+			.pic{
+				&:after{
+					content:"";
+					display: block;
+					position: absolute;
+					bottom: 10px;
+					left: 10px;
+					width: 118px;
+					@include border-radius(19px);
+					height: 36px;
+					background:rgba(#000, 0.5) url(../i/broadcasting.png) center center no-repeat;
+					border:1px solid #fff;
+				}
+			}
+			&:hover{
+				.pic{
+					&:after{
+						background-color: #000;
+						border-color: #000;
+					}
+				}
+
+			}
+		}
 	}
 	.picWrapper {
 		overflow: hidden;
@@ -227,6 +267,13 @@ main {
 	&:after {
 		background: #cbcbcb;
 	}
+	&>div{
+		&:after{
+			content:"";
+			display: block;
+			clear: both;
+		}
+	}
 	.desc {
 		width: 33.33%;
 		position: absolute;
@@ -234,6 +281,16 @@ main {
 		right: 0;
 		height: 100%;
 		overflow: hidden;
+		&.withLogo{
+			width: 50%;
+			padding: 0 4% 4%;
+			@include box-sizing(border-box);
+			img{
+				width: 70%;
+				display: block;
+				margin-bottom: 5%;
+			}
+		}
 
 		&:after{
 			content: "";
@@ -247,7 +304,7 @@ main {
 		p {
 			font-size: 14px;
 
-			color: #898989;
+			color: #000000;
 		}
 	}
 	.mapWrapper {
@@ -276,6 +333,10 @@ main {
 		margin-left: 75px;
 
 		
+	}
+	.videoBlock{
+		width: 50%;
+		float: left;
 	}
 }
 .stylCats{
@@ -568,6 +629,48 @@ main {
 			@include background-image(linear-gradient(top, rgba(#f26a65, 0) 0%, #f26a65 30%));
 		}
 	}
+	td{
+		span{
+			position: relative;
+		}
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3){
+			.popEvent{
+				top: 70%;
+				left: 70%;
+				
+			}
+		}
+	}
+	.popEvent{
+		display: none;
+		position: absolute;
+		top: 70%;
+		right: 70%;
+		background:#232931;
+		font-size: 12px;
+		line-height: 1.2;
+		width: 225px;
+		padding: 15%;
+		@include box-sizing(border-box);
+		z-index: 1;
+		text-align: left;
+		a{
+			display: block;
+			color:$pink;
+			text-decoration: underline;
+			margin-bottom: 3%;
+			font-size: 16px;
+			font-weight: 600;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		&.shown{
+			display: block;
+		}
+	}
 	.nav {
 		font-size: 48px;
 		font-weight: 700;
@@ -684,6 +787,22 @@ main {
 			font-weight: 300;
 			font-size: 14px;
 		}
+	}
+	.eventTitle{
+		font-size: 16px;
+		color:#fff;
+		text-decoration: underline;
+		margin-bottom: 10px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	.date{
+		font-size: 12px;
+		font-weight: 300;
+		display: block;
+		margin-bottom: 10px;
+		color:#fff;
 	}
 }
 
@@ -852,8 +971,30 @@ main {
 		font-weight: 700;
  
 	}
+	&.multimediaFilter{
+		.fluide{
+			margin-left: 250px;
+			margin-right: 25%;
+			padding-right: 40px;
+			float: none;
+			.label{
+				float: left;
+			}
+			.jq-selectbox{
+				width: auto;
+				display: block !important;
+				margin-left: 70px;
+			}
+		}
+		.inputFormRow{
+			width: 25%;
+			top: -34px;
+		}
+	}
 }
-
+.fluide{
+	float: none;
+}
 .sort{
 	margin-bottom: 40px;
 	.button{
@@ -873,15 +1014,44 @@ main {
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 1.8;
+	width: 33%;
+	.matInputWrapper{
+		background:transparent;
+		input {
+			width: 100%;
+			@include box-sizing(border-box);
+		}
+	}
+	form{
+		max-width: 275px;
+	}
+	.subTitleFirst{
+		font-size: 24px;
+	}
 }
 
+.chooseCountry{
+	.input{
+		margin-left: 80px;
+		width:300px !important;
+	}
+}
 .mapWrapper{
 
 }
 
 #mapYandex{
 	background:gray;
+	width: 50%;
 	height: 490px;
+	right: 0;
+	width: 66%;
+	.share{
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		z-index: 500;
+	}
 }
 
 .squerRows{
@@ -889,6 +1059,23 @@ main {
 	margin-right: -15px;
 	margin-left: -15px;
 	font-size: 0;
+	&.comisii{		
+		img{
+			max-width: 50% !important;
+			max-height: 50% !important;
+		}
+		.row{
+			text-align: center;
+		}
+		.title{
+			font-weight: 700;
+			font-size: 18px;
+		}
+		.polozh{
+			font-size: 14px;
+			color:#999999;
+		}
+	}
 	.row{
 		width: 16.666%;
 		padding: 0 15px;
