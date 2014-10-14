@@ -355,9 +355,24 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 			background:#343942;
 			color:#fff;
 		}
+		&.red{
+			background: transparent;
+			color:$pink;
+			border-color: $pink;
+			&:hover{
+				color:#fff;
+				background:$pink;
+			}
+		}
 	}
 }
 
+.withTitle{
+	float: right;
+	top: -80px;
+	padding: 0 30px;
+
+}
 .block{
 	padding-bottom: 80px;
 }
@@ -415,7 +430,11 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 		.title{
 			font-weight: 700;
 		}
-
+		.text{
+			&:after{
+				bottom: 0 !important;
+			}
+		}
 
 	}
 	&.partnerPage{

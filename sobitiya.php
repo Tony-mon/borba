@@ -1,62 +1,52 @@
 <?include 'include/headerInner.php';?>
-
-	<form class="filter">
+	
+	<div class="button buttonB withTitle red">Подписаться на новости</div>
+	
+	<form class="filter sobitiyaFilter">
+		<div class="fluide">
+			<div class="formRow countryOnPage">
+				<label for="" class="label">Страна</label>
+				<select name="" id="">
+					<option value="">Lorem ipsum.</option>
+					<option value="">Voluptates, consectetur?</option>
+					<option value="">Debitis, aspernatur.</option>
+					<option value="">Dicta, odit.</option>
+					<option value="">Blanditiis, fuga.</option>
+					<option value="">Nulla, mollitia.</option>
+					<option value="">Cum, magni.</option>
+					<option value="">Iusto, expedita.</option>
+					<option value="">Nulla, ipsa.</option>
+					<option value="">Repellat, esse.</option>
+				</select>
+			</div>
+			<div class="formRow year">
+				<div class="formRow">
+					<label for="" class="label">Год с</label>
+					<select name="" id="">
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+					</select>
+				</div>
+				<div class="formRow">
+					<label for="" class="label">Месяц</label>
+					<select name="" id="">
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+						<option value="">2001</option>
+					</select>
+				</div>
+				
+			</div>
+			<div class="clear"></div>
+		</div>
 		
-		<div class="formRow countryOnPage">
-			<label for="" class="label">Страна</label>
-			<select name="" id="">
-				<option value="">Lorem ipsum.</option>
-				<option value="">Voluptates, consectetur?</option>
-				<option value="">Debitis, aspernatur.</option>
-				<option value="">Dicta, odit.</option>
-				<option value="">Blanditiis, fuga.</option>
-				<option value="">Nulla, mollitia.</option>
-				<option value="">Cum, magni.</option>
-				<option value="">Iusto, expedita.</option>
-				<option value="">Nulla, ipsa.</option>
-				<option value="">Repellat, esse.</option>
-			</select>
-		</div>
-		<div class="formRow year">
-			<div class="formRow">
-				<label for="" class="label">Год с</label>
-				<select name="" id="">
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-				</select>
-			</div>
-			<div class="formRow">
-				<label for="" class="label">по</label>
-				<select name="" id="">
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-					<option value="">2001</option>
-				</select>
-			</div>
-			
-		</div>
-		<div class="formRow format">
-			<label for="" class="label">Формат</label>
-			<select name="" id="">
-				<option value="">Lorem ipsum.</option>
-				<option value="">Voluptates, consectetur?</option>
-				<option value="">Debitis, aspernatur.</option>
-				<option value="">Dicta, odit.</option>
-				<option value="">Blanditiis, fuga.</option>
-				<option value="">Nulla, mollitia.</option>
-				<option value="">Cum, magni.</option>
-				<option value="">Iusto, expedita.</option>
-				<option value="">Nulla, ipsa.</option>
-				<option value="">Repellat, esse.</option>
-			</select>
-		</div>
 		
 		<div class="formRow inputFormRow">
 			<input type="submit" class="red" value="Найти">

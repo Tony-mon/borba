@@ -1,10 +1,10 @@
 <?include 'include/headerInner.php';?>
 
-	<div class="stylCats">
+	<!-- <div class="stylCats">
 		<a href="" class="button buttonB active">Описание</a>
 		<a href="" class="button buttonB">Правила</a>
-		<a href="" class="button buttonB">Галерея</a>
-	</div>
+		<a href="" class="button buttonB">Галерея</a>  
+	</div> -->
 	<article>
 
 		<div class="post">

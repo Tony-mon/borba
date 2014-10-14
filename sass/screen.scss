@@ -17,7 +17,9 @@
 @import "additional/page";
 @import "fa/font-awesome";
 
-
+.pageTitle{
+	 //color:red;
+}
 
 /*--------------------------------------------- body -------------------------------------------*/
 body {
@@ -940,11 +942,14 @@ main {
 	.label{
 		color:rgba(#fff, 0.5);
 		float: none;
+		width: 50px !important;
+		text-align: right;
 	}
 
 	.formRow{
 		float: left;
-		margin-right: 40px;			
+		margin-right: 40px;		
+		@include box-sizing(border-box);	
 		.jq-selectbox{	
 			width: 250px;
 		}
@@ -971,11 +976,13 @@ main {
 		font-weight: 700;
  
 	}
-	&.multimediaFilter{
+	&.reitFilter,
+	&.multimediaFilter,
+	&.sobitiyaFilter{
 		.fluide{
-			margin-left: 250px;
-			margin-right: 25%;
+			
 			padding-right: 40px;
+			margin-right: 25%;
 			float: none;
 			.label{
 				float: left;
@@ -985,10 +992,30 @@ main {
 				display: block !important;
 				margin-left: 70px;
 			}
+
 		}
 		.inputFormRow{
 			width: 25%;
-			top: -34px;
+			margin-top: -34px;
+			float: right;
+		}
+	} 
+	&.reitFilter{
+		.fluide{
+			.formRow{
+				margin-right: 0;
+				width: 50%;
+				padding-right: 40px;
+				&:nth-child(2){
+					padding-right: 0;
+				}
+			}
+		}
+		
+	}
+	&.multimediaFilter{
+		.fluide{			
+			margin-left: 250px;			
 		}
 	}
 }
@@ -1014,7 +1041,9 @@ main {
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 1.8;
-	width: 33%;
+	width: 33.33%;
+	padding-right: 20px;
+	@include box-sizing(border-box);
 	.matInputWrapper{
 		background:transparent;
 		input {
@@ -1022,12 +1051,15 @@ main {
 			@include box-sizing(border-box);
 		}
 	}
-	form{
+	form{ 
 		max-width: 275px;
 	}
 	.subTitleFirst{
 		font-size: 24px;
 	}
+	input[type="submit"]{
+		padding: 0 30px;
+	}	
 }
 
 .chooseCountry{
@@ -1051,6 +1083,9 @@ main {
 		bottom: 10px;
 		right: 10px;
 		z-index: 500;
+	}
+	.button{
+		padding: 0 30px;
 	}
 }
 
@@ -1287,6 +1322,27 @@ main {
 .polojeniyaRows{
 	margin-right: -20px;
 	margin-left: -20px;
+	&.pressCenter{
+		.pic{
+			&:hover{
+				&:before, &:after{
+					display: none;
+				}
+			}
+			img{
+				border:0;
+			}
+		}
+		.title{
+			font-weight: 700;
+		}
+		p{
+			color:#000;
+			font-size: 14px;
+			padding-bottom: 10px;
+		}
+
+	}
 	.row{
 		width: 50%;
 		padding: 0 20px;
@@ -1348,6 +1404,47 @@ main {
 	}
 }
 
+.pressCols{
+	font-size: 0;
+	.col{
+		width: 50%;
+		font-size: 16px;
+		display: inline-block;
+		@include box-sizing(border-box);
+		&:nth-child(1){
+			padding-right: 15px;
+		}
+		&:nth-child(2){
+			padding-left: 15px;
+		}
+	}
+	h3{
+		font-size: 24px;
+		margin-bottom: 16px;
+	}
+	.row{
+		border-top: 1px solid #d4d4d4;
+		padding: 15px 0;
+		.title{
+			display: block; 
+			margin-bottom: 10px;
+			font-size: 24px;
+			&:hover{
+				text-decoration: underline;
+				color:$pink;
+			}
+		}
+		.date{
+			font-size: 16px;
+		}
+		.bookAction{
+			font-size: 14px;
+		}
+		&>div{
+			margin-bottom: 10px;
+		}
+	}
+}
 .rukPage{
 	.postPic{
 		width: 30%;
@@ -1374,6 +1471,21 @@ main {
 	}
 	&.pull-right{
 		margin-top: 28px;
+	}
+}
+
+.reitTable{
+	th{
+		span{
+			font-weight: 400;
+		}
+	}
+	td, th{
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6){
+			text-align: center;
+		} 
 	}
 }
 

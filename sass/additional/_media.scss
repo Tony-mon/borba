@@ -48,6 +48,22 @@
 				width:50% !important;
 			}
 		}
+
+		&.reitFilter{
+			.inputFormRow{
+				margin-top: -54px;
+				margin-bottom: 0;
+			}
+		}
+		&.reitFilter,
+		&.multimediaFilter{
+			.inputFormRow{
+				width: 25% !important;
+				padding-right: 0;
+			}
+		}
+
+
 		&.multimediaFilter{
 			padding-bottom: 25px;
 			&:after{
@@ -70,11 +86,6 @@
 			// }
 			.fluide{
 				width: auto;
-			}
-			.inputFormRow{
-				width: 25%;
-				top: -34px;
-				padding-right: 0;
 			}
 			.filterTitle{
 				width: 250px;
@@ -432,11 +443,11 @@
 		.row{
 			width: 100%;
 			img{
-				width: 25%;
+				width: 100%;
 			}
-			.text{
-				margin-left: 30%;
-			}
+			// .text{
+			// 	margin-left: 33%;
+			// }
 		}
 	}
 	.mapOnmain {
@@ -666,6 +677,14 @@
 			}
 		}
 	}
+	.pressCols{
+		.col{
+			margin-bottom: 40px;
+			width: 100%;
+			padding: 0 !important;
+			padding: 0;
+		}
+	}
 }
 
 @media screen and (max-width: 960px) {
@@ -687,10 +706,27 @@
 	.playButton{
 		@include scale(0.5); 
 	}
+	.withTitle{
+		float: none;
+		top: 0;
+		margin-bottom: 40px;
+	}
 }
 
 
 @media screen and (max-width: 768px) {
+
+	.contRow{
+		.contactsPageBlock, #mapYandex{
+			width: 100%;
+			float: none !important;
+			padding-right: 0;
+			clear: both;
+		}
+		#mapYandex{
+			margin-bottom: 25px;
+		}
+	}
 
 	.newsEvents{
 		padding-bottom: 30px;
@@ -737,8 +773,23 @@
 				padding: 0;
 			}
 		}
+		&.reitFilter,
 		&.multimediaFilter{
 			
+		}
+		&.reitFilter{
+			padding-bottom: 20px;
+			.inputFormRow{
+				width: 100% !important;
+				margin-top: 0;
+				float: none;
+			}
+			.fluide{
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+		&.multimediaFilter{
 			.fluide{
 				width: auto;
 				margin-left: 0;
@@ -787,6 +838,7 @@
 		&.kalendarTable{
 			thead, tbody, th, td, tr { 
 				display: block; 
+				text-align: left;
 			}
 		 
 			thead tr { 
@@ -830,10 +882,11 @@
 
 		&.reitTable{
 			td:nth-of-type(1):before { content: "№ п.п"; }
-			td:nth-of-type(2):before { content: "Рейтинг"; }
-			td:nth-of-type(3):before { content: "ФИО"; }
-			td:nth-of-type(4):before { content: "Стиль"; }
-			td:nth-of-type(5):before { content: "Возраст"; }
+			td:nth-of-type(2):before { content: "ФИО"; }
+			td:nth-of-type(3):before { content: "Страна"; }
+			td:nth-of-type(4):before { content: "Возраст"; }
+			td:nth-of-type(5):before { content: "Текущий рейтинг"; }
+			td:nth-of-type(6):before { content: "Рейтинг прошлого года"; }
 		}
 
 		&.campProgramm{
@@ -986,6 +1039,9 @@
 		li{
 			width: 100%;
 		}
+	}
+	#mapYandex{
+		height: 250px;
 	}
 	
 }
