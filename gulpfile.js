@@ -61,6 +61,7 @@ gulp.task('livereload', function(next) {
 
 // Watch for LESS and JS changes and run the respective compilers automatically
 gulp.task('watch', function () {
+    gulp.watch(sourceSASS + '/additional/*.scss', ['compass', 'livereload']);
     gulp.watch(sourceSASS + '/*.scss', ['compass', 'livereload']);
     gulp.watch('*.php', ['livereload']);
     //gulp.watch(sourceJS + '/main.js', ['js']);

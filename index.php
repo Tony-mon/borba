@@ -28,6 +28,7 @@
 	<a href="videoalbum.php">Видеоальбом</a><br>
 	<a href="volniyStil.php">Вольный стиль</a><br>
 	<a href="wallpaper.php">Обои</a><br>
+	<a href="archive.php">Архив результатов</a><br>
 	<br>
 	<br>
 	<br>

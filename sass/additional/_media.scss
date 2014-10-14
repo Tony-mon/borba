@@ -94,6 +94,20 @@
 				margin-bottom: 0;
 			}
 		}
+		&.sobitiyaFilter{
+			.formRow{
+				margin-bottom: 0;
+			}
+			.formRow:nth-of-type(odd){
+				width: 50%;
+			}
+			.formRow:nth-of-type(even){
+				width: 50%;	
+			}
+			.inputFormRow{
+				width: 25% !important;
+			}
+		}
 	}
 }
 
@@ -226,6 +240,28 @@
 				&:nth-child(1), &:nth-child(2){
 					display: block;
 				}
+			}
+		}
+	}
+	.filter{
+		&.sobitiyaFilter{
+			.fluide{
+				margin-right: 0;
+				padding: 0;
+
+			}
+			.countryOnPage{
+				width: 100% !important;
+				padding: 0;
+				float: none;
+				margin-bottom: 20px;
+				.jq-selectbox__select-text{
+					width: 60%;
+				}
+			}
+			.year{
+				width: 75% !important; 
+				padding-right: 30px !important;
 			}
 		}
 	}
@@ -408,8 +444,7 @@
 				width: auto;
 			}
 			.inputFormRow{
-				width: 25%;
-				top: -34px;
+				width: 25%;				
 				padding-right: 0;
 			}
 			.filterTitle{
@@ -796,7 +831,6 @@
 			}
 			.inputFormRow{
 				width: 25%;
-				top: -34px;
 				padding-right: 0;
 			}
 			.filterTitle{
@@ -835,7 +869,8 @@
 	.table{
 		&.reitTable, 
 		&.campProgramm, 
-		&.kalendarTable{
+		&.kalendarTable,
+		&.archiveTable{
 			thead, tbody, th, td, tr { 
 				display: block; 
 				text-align: left;
@@ -893,6 +928,11 @@
 			td:nth-of-type(1):before { content: "Дата и время"; }
 			td:nth-of-type(2):before { content: "Мероприятие"; }
 			td:nth-of-type(3):before { content: "Доп. инфо"; }
+		}
+		&.archiveTable{
+			td:nth-of-type(1):before { content: "Соревнования"; }
+			td:nth-of-type(2):before { content: "Место проведения"; }
+			td:nth-of-type(3):before { content: "Результаты"; }
 		}
 
 	}
@@ -965,6 +1005,34 @@
 			.inputFormRow{
 				top: 0;
 				float: none !important;
+				width: 100% !important;
+			}
+		}
+		&.sobitiyaFilter{
+			padding-bottom: 20px;
+			.fluide{
+
+			}
+			.countryOnPage{				
+				margin-bottom: 20px;
+				.jq-selectbox__select-text{
+					width: 100%;
+				}
+			}
+			.year{
+				width: 100% !important; 
+				padding-right: 0 !important;
+				margin-bottom: 20px;
+				float: none;
+				&:after{
+					display: block;
+					content: "";
+					clear: both;
+				}
+			}
+			.inputFormRow{
+				width: 100% !important;
+				top: auto;
 			}
 		}
 	}
@@ -1208,6 +1276,40 @@
 	.resultsBlock{
 		.row{
 			padding: 0 20px;
+		}
+	}
+	.sobitiyaFilter{
+		.formRow.year{
+			.formRow:nth-of-type(odd){
+				width: 100% !important;
+				padding: 0;
+				margin-bottom: 20px;
+			}
+		}
+		.formRow.year .formRow:nth-child(2){
+			width: 100% !important;
+			padding: 0;
+		}
+		.year{
+			.formRow{
+				width: 100% !important;
+			}
+		}
+	}
+	.button.withTitle {
+		padding: 0 15px;
+		width: 100%;
+		text-align: center;
+	}
+	.sort{
+		.button{
+			display: table;
+			margin-bottom: 20px;
+			width: 100%;
+			text-align: center;
+			&:last-child{
+				margin-bottom: 0px;
+			}
 		}
 	}
 }

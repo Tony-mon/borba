@@ -973,6 +973,19 @@ main {
 		font-weight: 700;
  
 	}
+	&.sobitiyaFilter{
+		.formRow {
+			width: 50%;
+			margin-right: 0;
+			padding-right: 30px;
+			&:last-of-type {
+				padding-right: 0;
+			}
+			&.year {
+				padding-right: 0;
+			}
+		}
+	}
 	&.reitFilter,
 	&.multimediaFilter,
 	&.sobitiyaFilter{
@@ -991,10 +1004,15 @@ main {
 			}
 
 		}
-		.inputFormRow{
+		.inputFormRow{ 
 			width: 25%;
-			margin-top: -34px;
+			top: -34px;
 			float: right;
+		}
+		&.withoutLabel{
+			.fluide{
+				margin-left: 0;
+			}
 		}
 	} 
 	&.reitFilter{
@@ -1059,6 +1077,41 @@ main {
 	}	
 }
 
+.archiveTable{
+	a{
+		&:hover{
+			color:$pink;
+		}
+	}
+	td{
+		&:first-child{
+			padding: 0;
+			a{
+				display: block;
+				padding: 15px 10px 15px 30px;
+				position: relative;
+				&:hover{
+					&:before{
+						content:"";
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: 5px;
+						background:$pink; 
+					}
+				}				
+			}
+		}
+		&:last-child{
+			a{
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
 .chooseCountry{
 	.input{
 		margin-left: 80px;
