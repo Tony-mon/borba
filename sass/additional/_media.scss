@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @media screen and (max-width: 1480px) {
 	.filter{
 		height: auto;
@@ -51,7 +53,10 @@
 
 		&.reitFilter{
 			.inputFormRow{
-				margin-top: -54px;
+				top: -34px;
+				margin-bottom: 0;
+			}
+			.formRow{
 				margin-bottom: 0;
 			}
 		}
@@ -60,6 +65,7 @@
 			.inputFormRow{
 				width: 25% !important;
 				padding-right: 0;
+
 			}
 		}
 
@@ -286,6 +292,17 @@
 	}	
 }
 @media screen and (max-width: 1023px) {
+
+	.mapChleny, 
+	.countryLists{
+		float: none;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-bottom: 40px;
+	}
+
 	body{
 		
 	}
@@ -751,6 +768,7 @@
 
 @media screen and (max-width: 768px) {
 
+
 	.contRow{
 		.contactsPageBlock, #mapYandex{
 			width: 100%;
@@ -818,10 +836,12 @@
 				width: 100% !important;
 				margin-top: 0;
 				float: none;
+				top: 0;
 			}
 			.fluide{
 				width: 100%;
 				margin-left: 0;
+				margin-bottom: 20px;
 			}
 		}
 		&.multimediaFilter{

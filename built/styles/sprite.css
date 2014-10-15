@@ -1,0 +1,117 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$broadcasting-x: 814px;
+$broadcasting-y: 46px;
+$broadcasting-offset-x: -814px;
+$broadcasting-offset-y: -46px;
+$broadcasting-width: 96px;
+$broadcasting-height: 24px;
+$broadcasting-total-width: 2277px;
+$broadcasting-total-height: 500px;
+$broadcasting-image: 'sprite.png';
+$broadcasting: 814px 46px -814px -46px 96px 24px 2277px 500px 'sprite.png';
+$composit-x: 623px;
+$composit-y: 46px;
+$composit-offset-x: -623px;
+$composit-offset-y: -46px;
+$composit-width: 188px;
+$composit-height: 31px;
+$composit-total-width: 2277px;
+$composit-total-height: 500px;
+$composit-image: 'sprite.png';
+$composit: 623px 46px -623px -46px 188px 31px 2277px 500px 'sprite.png';
+$marker-x: 597px;
+$marker-y: 46px;
+$marker-offset-x: -597px;
+$marker-offset-y: -46px;
+$marker-width: 23px;
+$marker-height: 34px;
+$marker-total-width: 2277px;
+$marker-total-height: 500px;
+$marker-image: 'sprite.png';
+$marker: 597px 46px -597px -46px 23px 34px 2277px 500px 'sprite.png';
+$mazok-x: 597px;
+$mazok-y: 0px;
+$mazok-offset-x: -597px;
+$mazok-offset-y: 0px;
+$mazok-width: 1680px;
+$mazok-height: 43px;
+$mazok-total-width: 2277px;
+$mazok-total-height: 500px;
+$mazok-image: 'sprite.png';
+$mazok: 597px 0px -597px 0px 1680px 43px 2277px 500px 'sprite.png';
+$partners-x: 403px;
+$partners-y: 0px;
+$partners-offset-x: -403px;
+$partners-offset-y: 0px;
+$partners-width: 78px;
+$partners-height: 119px;
+$partners-total-width: 2277px;
+$partners-total-height: 500px;
+$partners-image: 'sprite.png';
+$partners: 403px 0px -403px 0px 78px 119px 2277px 500px 'sprite.png';
+$sender-x: 484px;
+$sender-y: 0px;
+$sender-offset-x: -484px;
+$sender-offset-y: 0px;
+$sender-width: 110px;
+$sender-height: 83px;
+$sender-total-width: 2277px;
+$sender-total-height: 500px;
+$sender-image: 'sprite.png';
+$sender: 484px 0px -484px 0px 110px 83px 2277px 500px 'sprite.png';
+$sprite-x: 0px;
+$sprite-y: 0px;
+$sprite-offset-x: 0px;
+$sprite-offset-y: 0px;
+$sprite-width: 400px;
+$sprite-height: 500px;
+$sprite-total-width: 2277px;
+$sprite-total-height: 500px;
+$sprite-image: 'sprite.png';
+$sprite: 0px 0px 0px 0px 400px 500px 2277px 500px 'sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}

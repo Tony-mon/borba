@@ -17,6 +17,11 @@ var rename = require("gulp-rename");
 var livereload = require('gulp-livereload');
 var server = lr();
 
+// sprite gen
+var csso = require('gulp-csso');
+var imagemin = require('gulp-imagemin');
+var spritesmith = require('gulp.spritesmith');
+
 // Source and Target directories
 var sourceSASS = 'sass';
 var targetCSS = 'css';
@@ -32,7 +37,7 @@ gulp.task('compass', function() {
     config_file: './config.rb',
     css: 'css',
     sass: 'sass'
-  }))
+  })).on('error', gutil.log);
   //.pipe(gulp.dest('app/assets/temp'));
 });
 
@@ -57,6 +62,20 @@ gulp.task('livereload', function(next) {
        if (err) return console.error(err);
        next();
    });
+});
+
+gulp.task('sprite', function() {
+    var spriteData = 
+        gulp.src('./i/sprite/items/*.png') // source path of the sprite images
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: '_sprite.scss',
+                padding: 3,
+                algorithm: 'binary-tree',
+            }));
+
+    spriteData.img.pipe(gulp.dest('./i/sprite/')); // output path for the sprite
+    spriteData.css.pipe(gulp.dest('./css/additional/')); // output path for the CSS
 });
 
 // Watch for LESS and JS changes and run the respective compilers automatically

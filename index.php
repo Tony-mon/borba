@@ -29,6 +29,9 @@
 	<a href="volniyStil.php">Вольный стиль</a><br>
 	<a href="wallpaper.php">Обои</a><br>
 	<a href="archive.php">Архив результатов</a><br>
+	<a href="chleny.php">Члены ассоциации</a><br>
+	<a href="komisii.php">Комиссии</a><br>
+	<a href="press.php">Пресс-центр</a><br>
 	<br>
 	<br>
 	<br>

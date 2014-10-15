@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -15,7 +17,7 @@
 @import "additional/resets";
 @import "additional/typical";
 @import "additional/page";
-@import "fa/font-awesome";
+@import "fa/font-awesome"; 
 
 
 /*--------------------------------------------- body -------------------------------------------*/
@@ -59,7 +61,9 @@ main {
 		}
 	}
 }
-
+.txt{
+	color:#999;
+}
 .mainslider {
 	overflow: visible;
 
@@ -251,7 +255,7 @@ main {
 	}
 }
 
-.mapOnmain {
+.mapMainWrapper, .mapOnmain {
 	padding-bottom: 80px;
 
 	background: #cbcbcb;
@@ -1076,7 +1080,46 @@ main {
 		padding: 0 30px;
 	}	
 }
-
+.countryLists{
+	width: 50%;
+	margin-left: 50%;
+	padding-left: 1%;
+	@include box-sizing(border-box);
+	.title{
+		font-size: 24px; 
+		font-weight: 700;
+	}
+	.col{
+		padding: 0;
+		display: inline-block;
+	}
+}
+.countryPicker{
+	max-width: 570px;
+}
+.mapChleny{
+	width: 50%;
+	float: left;
+	padding-right: 1%;
+	@include box-sizing(border-box);
+	img.baseMap{
+		width: 100%;
+	}
+}
+.continentActive{
+	position: absolute;
+	@include opacity(0);
+	@include transition(all, 0.3s);
+	cursor: pointer;
+	&.euraz{
+		top: 0;right: 0;
+		width: 66.8%;		
+	}
+	&:hover{
+		@include opacity(1);
+		@include transition(all, 0.3s);
+	}
+}
 .archiveTable{
 	a{
 		&:hover{
@@ -1537,6 +1580,154 @@ main {
 			text-align: center;
 		} 
 	}
+}
+
+.countryLists{
+	.list{		
+		overflow: auto;
+		white-space: nowrap;
+		margin-bottom: 35px;
+	}
+	.col{
+		padding-bottom: 30px;
+		a{
+			padding: 5px;
+			display: block;
+			font-size: 15px;
+			&:hover{
+				background: $pink;
+				color:#fff;
+			}
+		}
+	}
+	.title{
+		margin-bottom: 20px;
+	}
+}
+
+// /*
+//  * CSS Styles that are needed by jScrollPane for it to operate correctly.
+//  *
+//  * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+//  * may not operate correctly without them.
+//  */
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+	outline: none !important;
+	&:focus{
+		outline-width: 0;
+	}
+}
+
+.jspPane
+{
+	position: absolute;
+	outline: none !important;
+	&:focus{
+		outline-width: 0;
+	}
+
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 100%;
+	background: #bebebe;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 12px;
+	background: #bebebe;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background: #bebebe;
+	position: relative;
+}
+
+.jspDrag
+{
+	background: #d4d4d4;
+	position: relative;
+	top: 2px;
+	left: 2px;
+	height: 8px;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
 }
 
 

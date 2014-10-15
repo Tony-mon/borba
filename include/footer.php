@@ -146,6 +146,7 @@
   
   <script src="http://fotorama.s3.amazonaws.com/4.6.2/fotorama.js"></script>
   <script src="js/libs/jquery.formstyler.min.js"></script>
+  <script type="text/javascript" src="js/libs/jquery.jscrollpane.min.js"></script>
   
   <!-- scripts concatenated and minified via ant build script-->
   <script type="text/javascript" src="js/script.js"></script>
