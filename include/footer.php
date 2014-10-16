@@ -87,6 +87,7 @@
 								<a href="" class="fa fa-facebook"></a>
 								<a href="" class="fa fa-youtube-play"></a>
 								<a href="" class="fa ok-ico"></a>
+								<a href="" class="fa mir-ico"></a>
 							</div>
 							<br><br>
 							<div id="bx-composite-banner"></div>

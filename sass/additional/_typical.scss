@@ -97,8 +97,10 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 	// 	background:#eee;
 	// }
 
+
+
 	/* form starting stylings ------------------------------- */
-	input 				{
+	input, textarea{
 	  font-size:18px;
 	  padding:10px 10px 10px 5px;
 	  display:block;
@@ -124,7 +126,8 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 	}
 
 	/* active state */
-	input:focus ~ label, input:valid ~ label		{
+	input:focus ~ label, input:valid ~ label,
+	textarea:focus ~ label, textarea:valid ~ label		{
 	  top:-10px;
 	  font-size:10px;
 	  color:#000;
@@ -150,7 +153,8 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 	  right:50%; 
 	}
 
-	input:valid ~ .bar{
+	input:valid ~ .bar,
+	textarea:valid ~ .bar{
 		.bar:before {
 		  left:50%;
 		}
@@ -160,7 +164,8 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 	}
 
 	/* active state */
-	input:focus ~ .bar:before, input:focus ~ .bar:after {
+	input:focus ~ .bar:before, input:focus ~ .bar:after,
+	textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
 	  width:50%;
 	}
 
@@ -176,7 +181,8 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 	}
 
 	/* active state */
-	input:focus ~ .highlight {
+	input:focus ~ .highlight,
+	textarea:focus ~ .highlight {
 	  -webkit-animation:inputHighlighter 0.3s ease;
 	  -moz-animation:inputHighlighter 0.3s ease;
 	  animation:inputHighlighter 0.3s ease;
@@ -335,7 +341,7 @@ form .ng-invalid.ng-dirty, .ng-dirty.invalid
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 0 10px;
+	padding: 0 20px;
 	line-height: 40px;
 	display: inline-block;
 	cursor: pointer;

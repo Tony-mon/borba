@@ -66,9 +66,14 @@ input {
 input,
 textarea {
 	@include box-shadow(none);
-
+	font-family: 'Open Sans', sans-serif;
+	@include box-sizing(border-box);
 	border: 0;
 	outline: 0;
+}
+textarea{
+	padding: 0 10px;
+	resize:none;
 }
 p {
 	margin: 0;

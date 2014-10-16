@@ -32,6 +32,7 @@
 	<a href="chleny.php">Члены ассоциации</a><br>
 	<a href="komisii.php">Комиссии</a><br>
 	<a href="press.php">Пресс-центр</a><br>
+	<a href="sobitie.php">Событие</a><br>
 	<br>
 	<br>
 	<br>

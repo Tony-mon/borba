@@ -1164,8 +1164,40 @@ main {
 .mapWrapper{
 
 }
+.commentsRows{
+	color:#999;
+	font-size: 14px;
+	margin-right: 450px;
+	strong{
+		color:#000;
+	}
+	.created{
+		margin-bottom: 15px;
+	}
+	.row{
+		margin-bottom: 25px;
+	}
 
-#mapYandex{
+}
+.commentForm{
+	width: 401px;
+	border: 1px solid #e1e1e1;
+	padding: 35px;
+	@include box-sizing(border-box);
+	float: right;
+	input.matInput,
+	textarea.matInput{
+		width: 100%;
+		@include box-sizing(border-box);
+	}
+	textarea{
+		height: 98px;
+	}
+	.subTitleFirst{
+		font-size: 24px;
+	}
+}
+.map{
 	background:gray;
 	width: 50%;
 	height: 490px;
@@ -1180,6 +1212,7 @@ main {
 	.button{
 		padding: 0 30px;
 	}
+	.wrapper{width:100%;height:100%;}
 }
 
 .squerRows{

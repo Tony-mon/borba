@@ -41,6 +41,7 @@
 .social{ 
 	display: inline-block;
 	padding-top: 7px;
+	white-space: nowrap;
 	#containerHeader &{
 		margin-right: -80px;
 	}
@@ -61,7 +62,8 @@
 			color:$pink;
 			border-color: $pink;
 		}
-		&.ok-ico{
+		&.ok-ico,
+		&.mir-ico{
 			&:after{
 				display: block;
 				content: "";
@@ -73,6 +75,18 @@
 			&:hover{
 				&:after{
 					background-position: -70px -259px;
+				}
+			}
+		}
+		&.mir-ico{
+			&:after{
+				background-position: -62px -279px;
+				width: 16px;
+				height: 16px;
+			}
+			&:hover{
+				&:after{
+					background-position: -34px -279px;
 				}
 			}
 		}
@@ -90,6 +104,16 @@
 				&:hover{
 					&:after{
 						background-position: -70px -259px;
+					}
+				}
+			}
+			&.mir-ico{
+				&:after{
+					background-position: -6px -279px;
+				}
+				&:hover{
+					&:after{
+						background-position: -34px -279px;
 					}
 				}
 			}

@@ -68,6 +68,7 @@
 			<a href="" class="fa fa-facebook"></a>
 			<a href="" class="fa fa-youtube-play"></a>
 			<a href="" class="fa ok-ico"></a>
+			<a href="" class="fa mir-ico"></a>
 			<div class="lang">
 				<a href="" class"ruLang"><img class="active" src="i/ruLang.jpg" alt=""></a>&nbsp;&nbsp;<a href="" class"ruLang"><img src="i/gbLang.jpg" alt=""></a>
 			</div>

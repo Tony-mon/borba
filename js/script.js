@@ -1,4 +1,15 @@
 $(function(){
+	
+	$('.sendFormNow').on('change', function(){
+		$(this).parents('form').trigger('submit');
+	});
+	function resizeVideo() {
+		var w = parseInt($(".videoRow:first .inner").width()),
+				h = w/1.33;
+		$('.videoRow .inner>div').width(w).height(h);
+		$(".videoRow .inner").height(h);
+	}
+	setTimeout(resizeVideo, 1000);
 
 	$("#menuButton").click(function(){
 		$("#pageHTML").toggleClass("openMenu");
@@ -16,6 +27,7 @@ $(function(){
 	
 
 	function topSl(){
+		resizeVideo();
 
 		$(".squerEl").each(function(){
 			$(this).height($(this).width());
@@ -48,7 +60,7 @@ $(function(){
 
 		});
 
-		$(".videoRow .inner").height($(".videoRow .inner").width()/1.43);
+		//$(".videoRow .inner").height($(".videoRow .inner").width()/1.43);
 
 
 
@@ -85,4 +97,5 @@ $(function(){
 
 	$('.countryLists .list').jScrollPane();	
 	
+	$(".colorbox").colorbox({rel:'group'});
 });
